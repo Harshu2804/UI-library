@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>NOVA</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,44 +13,359 @@
 <body>
   <!-- navbar -->
   <div class="nav-bar">
-    <input type="checkbox" id="check" name="" value="">
-    <label for="check" id="checkbtn"><i class="fa-solid fa-bars"></i></label>
     <!-- logo -->
     <h1 class="logo"><i class="fa-solid fa-star" style="font-size: 25px;"></i>NOVA</h1>
     <div class="nav-items">
-      <a href="theme.html">Theme</a>
-      <a href="">Colors</a>
-      <a href="">Typography</a>
-      <a href="">Fonts</a>
+      <a href="demo.html">Demo site</a>
+      <a href="#buttons">Buttons</a>
+      <a href="#typography">Typography</a>
+      <a href="#fonts">Fonts</a>
       <a href="">Docs</a>
     </div>
     <div class="right">
       <input type="search" placeholder="Search here" class="input">
       <i class="fa-solid fa-moon" id="dark-mode"></i>
     </div>
+    
   </div>
+
+
+
   <!-- hero -->
   <div class="hero-section">
     <div class="hero">
       <p class="name">NOVA- </p>
       <p class="line">"The next-gen CSS UI library built for speed and elegance."</p>
     </div>
-    <button class="btn-primary">Get Started</button>
-  </div>
-  <div class="section-1">
-    <div class="box">box1</div>
-    <div class="box">box1</div>
-    <div class="box">box1</div>
-    <div class="box">box1</div>
-    <div class="box">box1</div>
-    <div class="box">box1</div>
-  </div>
-  <div class="section-2">
-    section-2
+    <button class="button">Get Started</button>
   </div>
 
+  <!-- section-1 -->
+  <div class="section-1" id="section-1">
+    <!-- Input -->
+    <div class="box">
+      <span class="copy-icon" title="Copy" onclick="copyCode('input-code', 'input-copied')">🔗</span>
+      <h2>Input block</h2>
+      <p>A form can contain a text input field.</p>
+      <button class="copy-btn" onclick="togglePreview('input-preview')">Preview</button>
+      <div class="preview-box" id="input-preview">
+        <input class="ui-input" type="text" placeholder="Enter your name" />
+      </div>
+      <div id="input-code" style="display: none;">
+        &lt;input class="ui-input" type="text" placeholder="Enter your name" /&gt;
+      </div>
+      <span id="input-copied" class="copied-message">Copied!</span>
+    </div>
+
+    <!-- Badge -->
+    <div class="box">
+      <span class="copy-icon" title="Copy" onclick="copyCode('badge-code', 'badge-copied')">🔗</span>
+      <h2>Badge </h2>
+      <p>Click on preview button to view the badge</p>
+      <button class="copy-btn" onclick="togglePreview('badge-preview')">Preview</button>
+      <div class="preview-box" id="badge-preview">
+        <span class="badge">Badge</span>
+      </div>
+      <div id="badge-code" style="display: none;">
+        &lt;span class="badge"&gt;New&lt;/span&gt;
+      </div>
+      <span id="badge-copied" class="copied-message">Copied!</span>
+    </div>
+
+
+    <!-- Switch -->
+
+    <div class="box">
+      <h2>checkbox</h2>
+      <span class="copy-icon" title="Copy" onclick="copyCode('switch-code', 'switch-copied')">🔗</span>
+      </span>
+      <p>Click on preview to preview the checkbox.</p>
+      </label>
+      <button class="copy-btn" onclick="togglePreview('switch-preview')">Preview</button>
+      <div class="preview-box" id="switch-preview">
+        <label class="ui-switch">
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div id="switch-code" style="display: none;">
+        &lt;label class="ui-switch"&gt;
+        &lt;input type="checkbox" /&gt;
+        &lt;span class="slider"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+      </div>
+      <span id="switch-copied" class="copied-message">Copied!</span>
+    </div>
+
+    
+      <div class="box">
+        <span class="copy-icon" title="Copy" onclick="copyCode('font-style-code', 'font-style-copied')">🔗</span>
+        <h2>Font Styling</h2>
+        <button class="copy-btn" onclick="togglePreview('font-style-preview')">Preview</button>
+        <div class="preview-box" id="font-style-preview">
+          <p class="text-bold">Bold Text</p>
+          <p class="text-italic">Italic Text</p>
+          <p class="text-underline">Underlined Text</p>
+          <p class="text-capitalize">capitalized text</p>
+        </div>
+        <div id="font-style-code" style="display: none;">
+          &lt;p class="text-bold"&gt;Bold Text&lt;/p&gt;
+          &lt;p class="text-italic"&gt;Italic Text&lt;/p&gt;
+          &lt;p class="text-underline"&gt;Underlined Text&lt;/p&gt;
+          &lt;p class="text-capitalize"&gt;capitalized text&lt;/p&gt;
+        </div>
+        <span id="font-style-copied" class="copied-message">Copied!</span>
+      </div>
+   
+    <!-- card -->
+    <div class="box">
+      <span class="copy-icon" title="Copy" onclick="copyCode('utility-code', 'utility-copied')">🔗</span>
+      <h2>Utility Classes</h2>
+      <p>Handy helpers for spacing and alignment.</p>
+      <button class="copy-btn" onclick="togglePreview('utility-preview')">Preview</button>
+      <div class="preview-box" id="utility-preview">
+        <div class="flex gap-1 mb-2">
+          <div class="box-sm bg-blue">Flex Item</div>
+          <div class="box-sm bg-blue">Flex Item</div>
+        </div>
+        <div class="text-center p-2 bg-gray">Centered Text</div>
+        <div class="m-auto box-sm bg-green">Auto Margin</div>
+      </div>
+      <div id="utility-code" style="display: none;">
+        &lt;div class="flex gap-1 mb-2"&gt;
+          &lt;div class="box-sm bg-blue"&gt;Flex Item&lt;/div&gt;
+          &lt;div class="box-sm bg-blue"&gt;Flex Item&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="text-center p-2 bg-gray"&gt;Centered Text&lt;/div&gt;
+        &lt;div class="m-auto box-sm bg-green"&gt;Auto Margin&lt;/div&gt;
+      </div>
+      <span id="utility-copied" class="copied-message">Copied!</span>
+    </div>
+
+    <!-- card-7-->
+
+    <div class="box">
+      <h2>Cards</h2>
+      <p>Click on preview to view a card</p>
+      <span class="copy-icon" title="Copy" onclick="copyCode('card-code', 'card-copied')">🔗</span>
+      <button class="copy-btn" onclick="togglePreview('font-style-preview')">Preview</button>
+      <div class="preview-box" id="card-preview">
+        <div class="ui-card">
+          <p>
+            This is a sample card.Have you seen them in any websites?</p>
+        </div>
+      </div>
+      <div id="card-code" style="display: none;">
+        &lt;div class="ui-card"&gt;
+        &lt;p&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      </div>
+      <span id="card-copied" class="copied-message">Copied!</span>
+    </div>
+    <!-- card -->
+    <div class="box">
+      <div class="card utility-card">
+        <h2 class="card-title">Align Items Center</h2>
+        <div class="card-content">
+          <p>Centers items along the cross axis (vertically in row layout, horizontally in column layout).</p>
+          <div class="example-box" style="display: flex; align-items: center; height: 100px; background-color: #f0f0f0;">
+            <div style="width: 50px; height: 50px; background-color: #4CAF50;"></div>
+            <div style="width: 50px; height: 30px; background-color: #2196F3;"></div>
+            <div style="width: 50px; height: 70px; background-color: #FFC107;"></div>
+          </div>
+        </div>
+        <div class="code-snippet">
+          <pre>.align-items-center {
+        align-items: center;
+      }</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- card-8 -->
+
+    <div class="box">
+      <h2>Progress Bar</h2>
+      <p>Click on show progress button to start the progress.</p>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <button class="btn-primary" onclick="startProgress()">Start Progress</button>
+    </div>
+  </div>
+
+  <!-- section-2 -->
+  <div class="section-2" id="buttons">
+    <h2 class="heading">Buttons</h2>
+    <p>Nova UI contains various predefined button styles for user control.</p>
+   
+
+
+    <div class="copy-container">
+      <button class="btn copy-btn" onclick="openPreview('<button class=&quot;btn&quot;>Default Button</button>')">Default </button>
+    
+  
+   
+      
+      <button class="btn btn-primary " onclick="openPreview('<button class=&quot;btn btn-primary&quot;>Primary</button>')">Primary </button>
+    
+  
+ 
+     
+      <button class="btn btn-secondary " onclick="openPreview('<button class=&quot;btn btn-secondary&quot;>Secondary</button>')">Secondary</button>
+  
+  
+   
+     
+      <button class="btn btn-success " onclick="openPreview('<button class=&quot;btn btn-success&quot;>Success</button>')">Success</button>
+   
+  
+      <button class="btn btn-danger" onclick="openPreview('<button class=&quot;btn btn-danger&quot;>Danger</button>')">Danger</button>
+  
+      <button class="btn btn-warning" onclick="openPreview('<button class=&quot;btn btn-warning&quot;>Warning</button>')">Warning</button>
+  
+ 
+      <button class="btn btn-info " onclick="openPreview('<button class=&quot;btn btn-info&quot;>Info</button>')">Info</button>
+
+  
+    
+      <button class="btn btn-outline " onclick="openPreview('<button class=&quot;btn btn-outline&quot;>Outline</button>')">Outline</button>
+ 
+  
+
+      <button class="btn btn-primary btn-sm " onclick="openPreview('<button class=&quot;btn btn-primary btn-sm&quot;>Small Button</button>')">Small</button>
+   
+  
+      <button class="btn btn-primary btn-lg " onclick="openPreview('<button class=&quot;btn btn-primary btn-lg&quot;>Large Button</button>')">Large</button>
+ 
+      <button class="btn btn-primary" onclick="openPreview('<button class=&quot;btn btn-primary&quot; disabled>Disabled Button</button>')">Disabled</button>
+
+      <button class="round-btn1 btn " onclick="openPreview('<button class=&quot;round-btn1 btn&quot;>Round1</button>')">Round1</button>
+
+      <button class="round-btn2 btn" onclick="openPreview('<button class=&quot;round-btn2 btn&quot;>Round2</button>')">Round2</button>
+
+      <button class="round-btn3 btn" onclick="openPreview('<button class=&quot;round-btn3 btn&quot;>Round3</button>')">Round3</button>
+   
+      <button class="round-btn4 btn" onclick="openPreview('<button class=&quot;round-btn4 btn&quot;>Round4</button>')">Round4</button>
+  
+      <button class="round-btn4 btn " onclick="openPreview('<button class=&quot;round-btn4 btn&quot;>Round5</button>')">Round4</button>
+   
+      <button class="round-btn4 btn " onclick="openPreview('<button class=&quot;round-btn4 btn&quot;>Round6</button>')">Round6</button>
+      </div>
+  </div>
+
+  <!-- Preview Modal -->
+<div id="previewModal" class="preview-modal hidden">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <button class="copy-modal-btn" onclick="copyModalCode()">📋 Copy</button>
+    <div id="modalPreviewArea" class="preview-area"></div>
+    <pre id="modalCodeArea" class="code-area"></pre>
+  </div>
+
+  
+    <br>
+    
+  </div>
+  <!-- section-3 -->
+  <div class="section-3" id="typography">
+    <h2 class="heading">Typography</h2>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <p>This is a regular paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="text-muted">This is muted text.</p>
+    <p class="text-primary">This is primary colored text.</p>
+    <p class="text-success">This is success colored text.</p>
+    <p class="text-danger">This is danger colored text.</p>
+    <p class="text-warning">This is warning colored text.</p>
+    <p class="text-info">This is info colored text.</p>
+  </div>
+
+  <!-- section-4 -->
+  <div class="section-4">
+
+    <h2 class="heading" id="fonts">Fonts</h2>
+    <p>Our UI library provides a comprehensive font styling system that ensures typographic consistency while offering
+      flexibility for diverse design needs.</p>
+    <p id="para-font" class="heading">This is a sample text . Let's try to change its font by clicking these
+      buttons.Change my paragraph font.</p>
+    <div class="font-options">
+      <button class="font-button" onclick="changeFont('Arial, sans-serif')">Arial</button>
+      <button class="font-button" onclick="changeFont('Times New Roman, serif')">Times New Roman</button>
+      <button class="font-button" onclick="changeFont('Courier New, monospace')">Courier New</button>
+      <button class="font-button" onclick="changeFont('Georgia, serif')">Georgia</button>
+      <button class="font-button" onclick="changeFont('Verdana, sans-serif')">Verdana</button>
+      <button class="font-button" onclick="changeFont('Impact, sans-serif')">Impact</button>
+      <button class="font-button" onclick="changeFont('Comic Sans MS, cursive')">Comic Sans</button>
+      <button class="font-button" onclick="changeFont('Lucida Console, monospace')">Lucida Console</button>
+    </div>
+  </div>
+  <div class="section-5">
+    <div class="container">
+      <h2>Responsive 12-Column Grid </h2>
+      <div class="grid">
+        <div class="header col-12">
+            <p>A responsive 12-column grid system.</p>
+        </div>
+        
+       
+        <div class="grid-item col-12 col-md-6 col-sm-12">
+            <h3>Full Width Header</h3>
+        </div>
+        
+        <div class="grid-item col-3 col-md-4 col-sm-6">
+            <p>Column 1 (3 on desktop, 4 on tablet, 6 on mobile)</p>
+        </div>
+        
+        <div class="grid-item col-3 col-md-4 col-sm-6">
+            <p>Column 2</p>
+        </div>
+        
+        <div class="grid-item col-3 col-md-4 col-sm-6">
+            <p>Column 3</p>
+        </div>
+        
+        <div class="grid-item col-3 col-md-4 col-sm-6">
+            <p>Column 4</p>
+        </div>
+        
+        <div class="grid-item col-6 col-md-6 col-sm-12">
+            <p>Half Width (6 columns)</p>
+        </div>
+        
+        <div class="grid-item col-6 col-md-6 col-sm-12">
+            <p>Half Width (6 columns)</p>
+        </div>
+        
+        <div class="grid-item col-4 col-md-6 col-sm-12">
+            <p>One Third (4 columns)</p>
+        </div>
+        
+        <div class="grid-item col-4 col-md-6 col-sm-12">
+            <p>One Third (4 columns)</p>
+        </div>
+        
+        <div class="grid-item col-4 col-md-12 col-sm-12">
+            <p>One Third (4 columns)</p>
+        </div>
+      
+    </div>
+    </div>
+  </div>
+
+
   <!-- footer -->
-<footer>Your great ui library</footer>
+  <footer>
+
+    <p class="footer">&copy; 2025 NOVA UI Library. All Rights Reserved.</p>
+    <p class="footer">UI designed by codier.</p>
+  </footer>
+
+  <!-- javascript -->
+  <script src="script.js"></script>
 </body>
 
 </html>
