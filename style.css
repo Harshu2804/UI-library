@@ -887,7 +887,39 @@ p {
 }
 
 
+/* Typography Section Styles */
+.typography-box {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
 
+.dark-mode .typography-box {
+  background-color: rgba(88, 103, 129, 0.3);
+  color: var(--text-color);
+}
+
+.typography-box .copy-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.typography-box .copied-message {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  font-size: 12px;
+  color: #4CAF50;
+  display: none;
+}
+
+.dark-mode .typography-box .copied-message {
+  color: #4CAF50;
+}
 
 
 
